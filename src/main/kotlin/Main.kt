@@ -1,18 +1,16 @@
+import utils.ScannerInput
 import java.lang.System.exit
-import java.util.*
-
-val scanner = Scanner(System.`in`)
 
 fun main(args: Array<String>) {
     runMenu()
 }
 
 fun mainMenu() : Int {
-    print(""" 
+    return ScannerInput.readNextInt(""" 
          > ----------------------------------
          > |          GALLERY APP           |
          > ----------------------------------
-         > | GALLERY MENU                   |
+         > | ARTIST MENU                    |
          > |   1) Add an artist             |
          > |   2) List all artists          |
          > |   3) Update an artist          |
@@ -21,7 +19,6 @@ fun mainMenu() : Int {
          > |   0) Exit                      |
          > ----------------------------------
          > ==>> """.trimMargin(">"))
-    return scanner.nextInt()
 }
 
 fun runMenu() {
