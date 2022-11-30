@@ -1,9 +1,10 @@
 package models
 
-data class Note(val artistName: String,
-                val artistAge: Int,
-                val artistCountry: String,
-                val artistMovement: String,
-                val artistPopularity: Int,
-                val isArtistAlive: Boolean){
+data class Artist(
+    val artistName: String,
+    val artistAge: String,
+    val artistCountry: String,
+    val artistMovement: String,
+    val artistPopularity: Int,
+    val isArtistAlive: Boolean){
 }
