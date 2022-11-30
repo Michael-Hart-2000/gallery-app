@@ -1,8 +1,13 @@
+import controllers.ArtistAPI
+import models.Artist
 import mu.KotlinLogging
 import utils.ScannerInput
+import utils.ScannerInput.readNextInt
+import utils.ScannerInput.readNextLine
 import java.lang.System.exit
 
 private val logger = KotlinLogging.logger {}
+private val artistAPI = ArtistAPI()
 
 fun main(args: Array<String>) {
     runMenu()
@@ -39,11 +44,24 @@ fun runMenu() {
 }
 
 fun addArtist(){
-    logger.info { "addArtist() function invoked" }
+    //logger.info { "addArtist() function invoked" }
+    val artistName = readNextLine("Enter the name of the artist: ")
+    val artistAge = readNextLine("Enter the age of the artist: ")
+    val artistCountry = readNextLine("Enter the country the artist is from: ")
+    val artistMovement = readNextLine("Enter the art movement associated with the artist: ")
+    val artistPopularity = readNextInt("Enter a popularity rating (1-low, 2, 3, 4, 5-high): ")
+    val isAdded = artistAPI.add(Artist(artistName, artistAge, artistCountry, artistMovement, artistPopularity, false))
+
+    if (isAdded) {
+        println("Added Successfully")
+    } else {
+        println("Add Failed")
+    }
 }
 
 fun listArtists(){
-    logger.info { "listArtist() function invoked" }
+    //logger.info { "listNotes() function invoked" }
+    println(artistAPI.listAllArtists())
 }
 
 fun updateArtist(){
