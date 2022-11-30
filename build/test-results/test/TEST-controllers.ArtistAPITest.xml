@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controllers.ArtistAPITest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-30T16:20:33" hostname="IT101PC07" time="0.022">
+  <properties/>
+  <testcase name="adding a Artist to a populated list adds to ArrayList()" classname="controllers.ArtistAPITest" time="0.02"/>
+  <testcase name="adding a Artist to an empty list adds to ArrayList()" classname="controllers.ArtistAPITest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
